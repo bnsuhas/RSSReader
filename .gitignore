@@ -1,4 +1,5 @@
-RSSReader.xcodeproj/project.xcworkspace/xcuserdata/suhas.xcuserdatad/UserInterfaceState.xcuserstate
-RSSReader.xcodeproj/project.xcworkspace/xcuserdata/suhas.xcuserdatad/WorkspaceSettings.xcsettings
-RSSReader.xcodeproj/xcuserdata/suhas.xcuserdatad/xcschemes/RSSReader.xcscheme
-RSSReader.xcodeproj/xcuserdata/suhas.xcuserdatad/xcschemes/xcschememanagement.plist
+*.xcuserstate
+*.xcsettings
+*.xcscheme
+*/xcschememanagement.plist
+*.xcbkptlist

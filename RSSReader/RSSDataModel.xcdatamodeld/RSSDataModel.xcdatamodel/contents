@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="RSS_Article" syncable="YES">
+    <entity name="RSS_Article" representedClassName="RSS_Article" syncable="YES">
         <attribute name="article_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isRead" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="feed" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RSS_Feed" inverseName="articles" inverseEntity="RSS_Feed" syncable="YES"/>
     </entity>
-    <entity name="RSS_Feed" syncable="YES">
+    <entity name="RSS_Feed" representedClassName="RSS_Feed" syncable="YES">
         <attribute name="displayNotifications" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="feed_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>

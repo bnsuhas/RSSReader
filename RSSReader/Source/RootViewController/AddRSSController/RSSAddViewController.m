@@ -7,6 +7,7 @@
 //
 
 #import "RSSAddViewController.h"
+#import "RSS_Feed.h"
 
 @interface RSSAddViewController ()
 
@@ -35,6 +36,16 @@
 
 - (IBAction)done:(id)sender
 {
+    RSS_Feed *newFeed = [NSEntityDescription insertNewObjectForEntityForName:@"RSS_Feed" inManagedObjectContext:[RSSUtility managedObjectContext]];
+    
+    newFeed.name = self.RSSDisplayName.text;
+    
+    newFeed.feed_url = self.URL.text;
+    
+    newFeed.displayNotifications = [NSNumber numberWithBool:self.showNotifications.on];
+    
+    [[RSSUtility managedObjectContext] save:nil];
+    
     [self.delegate didFinishAddingNewRSS:self];
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "RSSRootViewController.h"
+#import "RSS_Feed.h"
 
 @interface RSSRootViewController ()
 
@@ -56,7 +57,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"RSS_Feed"];
+    
+    return [[[RSSUtility managedObjectContext] executeFetchRequest:fetchRequest error:nil] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,6 +72,18 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"RootViewCell"];
     }
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RSS_Feed"];
+    
+    NSArray *feedsArray = [[RSSUtility managedObjectContext] executeFetchRequest:request error:nil];
+    
+    cell.imageView.image = [UIImage imageNamed:@"rss"];
+    
+    cell.textLabel.text = [(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] name];
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    cell.detailTextLabel.text = [(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] feed_url];
     
     return cell;
 }

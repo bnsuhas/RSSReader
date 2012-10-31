@@ -40,6 +40,11 @@
 		ADBEC69D1640D77000FC34F1 /* Rounded_text_field.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC69C1640D77000FC34F1 /* Rounded_text_field.png */; };
 		ADBEC6A21640DB7100FC34F1 /* RSSFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6A11640DB7100FC34F1 /* RSSFeedViewController.m */; };
 		ADBEC6A51640DBA900FC34F1 /* RSSAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6A41640DBA900FC34F1 /* RSSAddViewController.m */; };
+		ADBEC6AF164116BC00FC34F1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC6AE164116BC00FC34F1 /* CoreData.framework */; };
+		ADBEC6B3164117B600FC34F1 /* RSS_Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6B2164117B600FC34F1 /* RSS_Feed.m */; };
+		ADBEC6B6164117B700FC34F1 /* RSS_Article.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6B5164117B600FC34F1 /* RSS_Article.m */; };
+		ADBEC6B9164118ED00FC34F1 /* RSSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6B8164118ED00FC34F1 /* RSSUtility.m */; };
+		ADBEC6C316412D2600FC34F1 /* rss.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6C216412D2600FC34F1 /* rss.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +103,14 @@
 		ADBEC6A11640DB7100FC34F1 /* RSSFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSFeedViewController.m; sourceTree = "<group>"; };
 		ADBEC6A31640DBA900FC34F1 /* RSSAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSAddViewController.h; sourceTree = "<group>"; };
 		ADBEC6A41640DBA900FC34F1 /* RSSAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSAddViewController.m; sourceTree = "<group>"; };
+		ADBEC6AE164116BC00FC34F1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ADBEC6B1164117B500FC34F1 /* RSS_Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSS_Feed.h; sourceTree = "<group>"; };
+		ADBEC6B2164117B600FC34F1 /* RSS_Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSS_Feed.m; sourceTree = "<group>"; };
+		ADBEC6B4164117B600FC34F1 /* RSS_Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSS_Article.h; sourceTree = "<group>"; };
+		ADBEC6B5164117B600FC34F1 /* RSS_Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSS_Article.m; sourceTree = "<group>"; };
+		ADBEC6B7164118ED00FC34F1 /* RSSUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSUtility.h; sourceTree = "<group>"; };
+		ADBEC6B8164118ED00FC34F1 /* RSSUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSUtility.m; sourceTree = "<group>"; };
+		ADBEC6C216412D2600FC34F1 /* rss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rss.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBEC6AF164116BC00FC34F1 /* CoreData.framework in Frameworks */,
 				ADBEC6921640D0B000FC34F1 /* libz.dylib in Frameworks */,
 				ADBEC6901640D0A800FC34F1 /* MobileCoreServices.framework in Frameworks */,
 				ADBEC68E1640D09F00FC34F1 /* SystemConfiguration.framework in Frameworks */,
@@ -138,6 +152,7 @@
 		ADBEC62C1640C83600FC34F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADBEC6AE164116BC00FC34F1 /* CoreData.framework */,
 				ADBEC6911640D0B000FC34F1 /* libz.dylib */,
 				ADBEC68F1640D0A800FC34F1 /* MobileCoreServices.framework */,
 				ADBEC68D1640D09F00FC34F1 /* SystemConfiguration.framework */,
@@ -180,11 +195,14 @@
 			children = (
 				ADBEC6571640CAD100FC34F1 /* RSSAppDelegate.h */,
 				ADBEC6581640CAD100FC34F1 /* RSSAppDelegate.m */,
+				ADBEC6B7164118ED00FC34F1 /* RSSUtility.h */,
+				ADBEC6B8164118ED00FC34F1 /* RSSUtility.m */,
 				ADBEC6541640CAD100FC34F1 /* MainViewController */,
 				ADBEC65F1640CBCB00FC34F1 /* RootViewController */,
 				ADBEC69F1640DB5D00FC34F1 /* FeedViewController */,
 				ADBEC6591640CAD100FC34F1 /* WebViewController */,
 				ADBEC66A1640D06000FC34F1 /* ASIHTTPRequest */,
+				ADBEC6B0164117AC00FC34F1 /* Model */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -265,6 +283,7 @@
 		ADBEC6941640D6BE00FC34F1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ADBEC6C216412D2600FC34F1 /* rss.png */,
 				ADBEC6951640D6BE00FC34F1 /* Add New RSS */,
 			);
 			path = Images;
@@ -297,6 +316,17 @@
 				ADBEC6A11640DB7100FC34F1 /* RSSFeedViewController.m */,
 			);
 			path = FeedViewController;
+			sourceTree = "<group>";
+		};
+		ADBEC6B0164117AC00FC34F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC6B4164117B600FC34F1 /* RSS_Article.h */,
+				ADBEC6B5164117B600FC34F1 /* RSS_Article.m */,
+				ADBEC6B1164117B500FC34F1 /* RSS_Feed.h */,
+				ADBEC6B2164117B600FC34F1 /* RSS_Feed.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +390,7 @@
 				ADBEC69A1640D6BE00FC34F1 /* rounded_table_cell_bottom@2x.png in Resources */,
 				ADBEC69B1640D6BE00FC34F1 /* rounded_table_cell_top@2x.png in Resources */,
 				ADBEC69D1640D77000FC34F1 /* Rounded_text_field.png in Resources */,
+				ADBEC6C316412D2600FC34F1 /* rss.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +418,9 @@
 				ADBEC68A1640D06000FC34F1 /* Reachability.m in Sources */,
 				ADBEC6A21640DB7100FC34F1 /* RSSFeedViewController.m in Sources */,
 				ADBEC6A51640DBA900FC34F1 /* RSSAddViewController.m in Sources */,
+				ADBEC6B3164117B600FC34F1 /* RSS_Feed.m in Sources */,
+				ADBEC6B6164117B700FC34F1 /* RSS_Article.m in Sources */,
+				ADBEC6B9164118ED00FC34F1 /* RSSUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

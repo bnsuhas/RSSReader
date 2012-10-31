@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 Exilant Technologies Pvt Ltd. All rights reserved.
 //
 
-#import "RSSViewController.h"
+#import "RSSWebViewController.h"
 
-@interface RSSViewController ()
+@interface RSSWebViewController ()
 
 @end
 
-@implementation RSSViewController
+@implementation RSSWebViewController
 
 - (void)viewDidLoad
 {

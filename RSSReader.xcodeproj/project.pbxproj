@@ -12,12 +12,34 @@
 		ADBEC6321640C83600FC34F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC6311640C83600FC34F1 /* CoreGraphics.framework */; };
 		ADBEC6381640C83600FC34F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6361640C83600FC34F1 /* InfoPlist.strings */; };
 		ADBEC63A1640C83600FC34F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6391640C83600FC34F1 /* main.m */; };
-		ADBEC63E1640C83600FC34F1 /* RSSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC63D1640C83600FC34F1 /* RSSAppDelegate.m */; };
 		ADBEC6401640C83600FC34F1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC63F1640C83600FC34F1 /* Default.png */; };
 		ADBEC6421640C83600FC34F1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6411640C83600FC34F1 /* Default@2x.png */; };
 		ADBEC6441640C83600FC34F1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6431640C83600FC34F1 /* Default-568h@2x.png */; };
 		ADBEC6471640C83600FC34F1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6451640C83600FC34F1 /* MainStoryboard.storyboard */; };
-		ADBEC64A1640C83600FC34F1 /* RSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6491640C83600FC34F1 /* RSSViewController.m */; };
+		ADBEC65C1640CAD100FC34F1 /* RSSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6561640CAD100FC34F1 /* RSSMainViewController.m */; };
+		ADBEC65D1640CAD100FC34F1 /* RSSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6581640CAD100FC34F1 /* RSSAppDelegate.m */; };
+		ADBEC65E1640CAD100FC34F1 /* RSSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC65B1640CAD100FC34F1 /* RSSWebViewController.m */; };
+		ADBEC6621640CBE900FC34F1 /* RSSRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6611640CBE900FC34F1 /* RSSRootViewController.m */; };
+		ADBEC6651640CC6F00FC34F1 /* RSSDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6631640CC6F00FC34F1 /* RSSDataModel.xcdatamodeld */; };
+		ADBEC6821640D06000FC34F1 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC66C1640D06000FC34F1 /* ASIAuthenticationDialog.m */; };
+		ADBEC6831640D06000FC34F1 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC66F1640D06000FC34F1 /* ASIDataCompressor.m */; };
+		ADBEC6841640D06000FC34F1 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6711640D06000FC34F1 /* ASIDataDecompressor.m */; };
+		ADBEC6851640D06000FC34F1 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6731640D06000FC34F1 /* ASIDownloadCache.m */; };
+		ADBEC6861640D06000FC34F1 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6751640D06000FC34F1 /* ASIFormDataRequest.m */; };
+		ADBEC6871640D06000FC34F1 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6771640D06000FC34F1 /* ASIHTTPRequest.m */; };
+		ADBEC6881640D06000FC34F1 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC67B1640D06000FC34F1 /* ASIInputStream.m */; };
+		ADBEC6891640D06000FC34F1 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC67D1640D06000FC34F1 /* ASINetworkQueue.m */; };
+		ADBEC68A1640D06000FC34F1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6811640D06000FC34F1 /* Reachability.m */; };
+		ADBEC68C1640D09700FC34F1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC68B1640D09700FC34F1 /* CFNetwork.framework */; };
+		ADBEC68E1640D09F00FC34F1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC68D1640D09F00FC34F1 /* SystemConfiguration.framework */; };
+		ADBEC6901640D0A800FC34F1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC68F1640D0A800FC34F1 /* MobileCoreServices.framework */; };
+		ADBEC6921640D0B000FC34F1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC6911640D0B000FC34F1 /* libz.dylib */; };
+		ADBEC6991640D6BE00FC34F1 /* rounded_table_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6961640D6BE00FC34F1 /* rounded_table_cell.png */; };
+		ADBEC69A1640D6BE00FC34F1 /* rounded_table_cell_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6971640D6BE00FC34F1 /* rounded_table_cell_bottom@2x.png */; };
+		ADBEC69B1640D6BE00FC34F1 /* rounded_table_cell_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6981640D6BE00FC34F1 /* rounded_table_cell_top@2x.png */; };
+		ADBEC69D1640D77000FC34F1 /* Rounded_text_field.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC69C1640D77000FC34F1 /* Rounded_text_field.png */; };
+		ADBEC6A21640DB7100FC34F1 /* RSSFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6A11640DB7100FC34F1 /* RSSFeedViewController.m */; };
+		ADBEC6A51640DBA900FC34F1 /* RSSAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6A41640DBA900FC34F1 /* RSSAddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,14 +51,53 @@
 		ADBEC6371640C83600FC34F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADBEC6391640C83600FC34F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ADBEC63B1640C83600FC34F1 /* RSSReader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSSReader-Prefix.pch"; sourceTree = "<group>"; };
-		ADBEC63C1640C83600FC34F1 /* RSSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSAppDelegate.h; sourceTree = "<group>"; };
-		ADBEC63D1640C83600FC34F1 /* RSSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSAppDelegate.m; sourceTree = "<group>"; };
 		ADBEC63F1640C83600FC34F1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		ADBEC6411640C83600FC34F1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		ADBEC6431640C83600FC34F1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		ADBEC6461640C83600FC34F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		ADBEC6481640C83600FC34F1 /* RSSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSViewController.h; sourceTree = "<group>"; };
-		ADBEC6491640C83600FC34F1 /* RSSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSViewController.m; sourceTree = "<group>"; };
+		ADBEC6551640CAD100FC34F1 /* RSSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSMainViewController.h; sourceTree = "<group>"; };
+		ADBEC6561640CAD100FC34F1 /* RSSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSMainViewController.m; sourceTree = "<group>"; };
+		ADBEC6571640CAD100FC34F1 /* RSSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSAppDelegate.h; sourceTree = "<group>"; };
+		ADBEC6581640CAD100FC34F1 /* RSSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSAppDelegate.m; sourceTree = "<group>"; };
+		ADBEC65A1640CAD100FC34F1 /* RSSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSWebViewController.h; sourceTree = "<group>"; };
+		ADBEC65B1640CAD100FC34F1 /* RSSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSWebViewController.m; sourceTree = "<group>"; };
+		ADBEC6601640CBE900FC34F1 /* RSSRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSRootViewController.h; sourceTree = "<group>"; };
+		ADBEC6611640CBE900FC34F1 /* RSSRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSRootViewController.m; sourceTree = "<group>"; };
+		ADBEC6641640CC6F00FC34F1 /* RSSDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSSDataModel.xcdatamodel; sourceTree = "<group>"; };
+		ADBEC66B1640D06000FC34F1 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		ADBEC66C1640D06000FC34F1 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		ADBEC66D1640D06000FC34F1 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		ADBEC66E1640D06000FC34F1 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		ADBEC66F1640D06000FC34F1 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		ADBEC6701640D06000FC34F1 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		ADBEC6711640D06000FC34F1 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		ADBEC6721640D06000FC34F1 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		ADBEC6731640D06000FC34F1 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		ADBEC6741640D06000FC34F1 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		ADBEC6751640D06000FC34F1 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		ADBEC6761640D06000FC34F1 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		ADBEC6771640D06000FC34F1 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		ADBEC6781640D06000FC34F1 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		ADBEC6791640D06000FC34F1 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		ADBEC67A1640D06000FC34F1 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		ADBEC67B1640D06000FC34F1 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		ADBEC67C1640D06000FC34F1 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		ADBEC67D1640D06000FC34F1 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		ADBEC67E1640D06000FC34F1 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		ADBEC6801640D06000FC34F1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		ADBEC6811640D06000FC34F1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		ADBEC68B1640D09700FC34F1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		ADBEC68D1640D09F00FC34F1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		ADBEC68F1640D0A800FC34F1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		ADBEC6911640D0B000FC34F1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		ADBEC6961640D6BE00FC34F1 /* rounded_table_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rounded_table_cell.png; sourceTree = "<group>"; };
+		ADBEC6971640D6BE00FC34F1 /* rounded_table_cell_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rounded_table_cell_bottom@2x.png"; sourceTree = "<group>"; };
+		ADBEC6981640D6BE00FC34F1 /* rounded_table_cell_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rounded_table_cell_top@2x.png"; sourceTree = "<group>"; };
+		ADBEC69C1640D77000FC34F1 /* Rounded_text_field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rounded_text_field.png; sourceTree = "<group>"; };
+		ADBEC6A01640DB7100FC34F1 /* RSSFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSFeedViewController.h; sourceTree = "<group>"; };
+		ADBEC6A11640DB7100FC34F1 /* RSSFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSFeedViewController.m; sourceTree = "<group>"; };
+		ADBEC6A31640DBA900FC34F1 /* RSSAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSAddViewController.h; sourceTree = "<group>"; };
+		ADBEC6A41640DBA900FC34F1 /* RSSAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSAddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +105,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBEC6921640D0B000FC34F1 /* libz.dylib in Frameworks */,
+				ADBEC6901640D0A800FC34F1 /* MobileCoreServices.framework in Frameworks */,
+				ADBEC68E1640D09F00FC34F1 /* SystemConfiguration.framework in Frameworks */,
+				ADBEC68C1640D09700FC34F1 /* CFNetwork.framework in Frameworks */,
 				ADBEC62E1640C83600FC34F1 /* UIKit.framework in Frameworks */,
 				ADBEC6301640C83600FC34F1 /* Foundation.framework in Frameworks */,
 				ADBEC6321640C83600FC34F1 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +138,10 @@
 		ADBEC62C1640C83600FC34F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADBEC6911640D0B000FC34F1 /* libz.dylib */,
+				ADBEC68F1640D0A800FC34F1 /* MobileCoreServices.framework */,
+				ADBEC68D1640D09F00FC34F1 /* SystemConfiguration.framework */,
+				ADBEC68B1640D09700FC34F1 /* CFNetwork.framework */,
 				ADBEC62D1640C83600FC34F1 /* UIKit.framework */,
 				ADBEC62F1640C83600FC34F1 /* Foundation.framework */,
 				ADBEC6311640C83600FC34F1 /* CoreGraphics.framework */,
@@ -83,11 +152,10 @@
 		ADBEC6331640C83600FC34F1 /* RSSReader */ = {
 			isa = PBXGroup;
 			children = (
-				ADBEC63C1640C83600FC34F1 /* RSSAppDelegate.h */,
-				ADBEC63D1640C83600FC34F1 /* RSSAppDelegate.m */,
+				ADBEC6531640CAD100FC34F1 /* Source */,
 				ADBEC6451640C83600FC34F1 /* MainStoryboard.storyboard */,
-				ADBEC6481640C83600FC34F1 /* RSSViewController.h */,
-				ADBEC6491640C83600FC34F1 /* RSSViewController.m */,
+				ADBEC6631640CC6F00FC34F1 /* RSSDataModel.xcdatamodeld */,
+				ADBEC6931640D6BE00FC34F1 /* Resources */,
 				ADBEC6341640C83600FC34F1 /* Supporting Files */,
 			);
 			path = RSSReader;
@@ -105,6 +173,130 @@
 				ADBEC6431640C83600FC34F1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADBEC6531640CAD100FC34F1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC6571640CAD100FC34F1 /* RSSAppDelegate.h */,
+				ADBEC6581640CAD100FC34F1 /* RSSAppDelegate.m */,
+				ADBEC6541640CAD100FC34F1 /* MainViewController */,
+				ADBEC65F1640CBCB00FC34F1 /* RootViewController */,
+				ADBEC69F1640DB5D00FC34F1 /* FeedViewController */,
+				ADBEC6591640CAD100FC34F1 /* WebViewController */,
+				ADBEC66A1640D06000FC34F1 /* ASIHTTPRequest */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		ADBEC6541640CAD100FC34F1 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC6551640CAD100FC34F1 /* RSSMainViewController.h */,
+				ADBEC6561640CAD100FC34F1 /* RSSMainViewController.m */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		ADBEC6591640CAD100FC34F1 /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC65A1640CAD100FC34F1 /* RSSWebViewController.h */,
+				ADBEC65B1640CAD100FC34F1 /* RSSWebViewController.m */,
+			);
+			path = WebViewController;
+			sourceTree = "<group>";
+		};
+		ADBEC65F1640CBCB00FC34F1 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC6601640CBE900FC34F1 /* RSSRootViewController.h */,
+				ADBEC6611640CBE900FC34F1 /* RSSRootViewController.m */,
+				ADBEC69E1640DB3900FC34F1 /* AddRSSController */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		ADBEC66A1640D06000FC34F1 /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC66B1640D06000FC34F1 /* ASIAuthenticationDialog.h */,
+				ADBEC66C1640D06000FC34F1 /* ASIAuthenticationDialog.m */,
+				ADBEC66D1640D06000FC34F1 /* ASICacheDelegate.h */,
+				ADBEC66E1640D06000FC34F1 /* ASIDataCompressor.h */,
+				ADBEC66F1640D06000FC34F1 /* ASIDataCompressor.m */,
+				ADBEC6701640D06000FC34F1 /* ASIDataDecompressor.h */,
+				ADBEC6711640D06000FC34F1 /* ASIDataDecompressor.m */,
+				ADBEC6721640D06000FC34F1 /* ASIDownloadCache.h */,
+				ADBEC6731640D06000FC34F1 /* ASIDownloadCache.m */,
+				ADBEC6741640D06000FC34F1 /* ASIFormDataRequest.h */,
+				ADBEC6751640D06000FC34F1 /* ASIFormDataRequest.m */,
+				ADBEC6761640D06000FC34F1 /* ASIHTTPRequest.h */,
+				ADBEC6771640D06000FC34F1 /* ASIHTTPRequest.m */,
+				ADBEC6781640D06000FC34F1 /* ASIHTTPRequestConfig.h */,
+				ADBEC6791640D06000FC34F1 /* ASIHTTPRequestDelegate.h */,
+				ADBEC67A1640D06000FC34F1 /* ASIInputStream.h */,
+				ADBEC67B1640D06000FC34F1 /* ASIInputStream.m */,
+				ADBEC67C1640D06000FC34F1 /* ASINetworkQueue.h */,
+				ADBEC67D1640D06000FC34F1 /* ASINetworkQueue.m */,
+				ADBEC67E1640D06000FC34F1 /* ASIProgressDelegate.h */,
+				ADBEC67F1640D06000FC34F1 /* Reachability */,
+			);
+			path = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		ADBEC67F1640D06000FC34F1 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC6801640D06000FC34F1 /* Reachability.h */,
+				ADBEC6811640D06000FC34F1 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		ADBEC6931640D6BE00FC34F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC6941640D6BE00FC34F1 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADBEC6941640D6BE00FC34F1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC6951640D6BE00FC34F1 /* Add New RSS */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		ADBEC6951640D6BE00FC34F1 /* Add New RSS */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC6961640D6BE00FC34F1 /* rounded_table_cell.png */,
+				ADBEC6971640D6BE00FC34F1 /* rounded_table_cell_bottom@2x.png */,
+				ADBEC6981640D6BE00FC34F1 /* rounded_table_cell_top@2x.png */,
+				ADBEC69C1640D77000FC34F1 /* Rounded_text_field.png */,
+			);
+			path = "Add New RSS";
+			sourceTree = "<group>";
+		};
+		ADBEC69E1640DB3900FC34F1 /* AddRSSController */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC6A31640DBA900FC34F1 /* RSSAddViewController.h */,
+				ADBEC6A41640DBA900FC34F1 /* RSSAddViewController.m */,
+			);
+			path = AddRSSController;
+			sourceTree = "<group>";
+		};
+		ADBEC69F1640DB5D00FC34F1 /* FeedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ADBEC6A01640DB7100FC34F1 /* RSSFeedViewController.h */,
+				ADBEC6A11640DB7100FC34F1 /* RSSFeedViewController.m */,
+			);
+			path = FeedViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +356,10 @@
 				ADBEC6421640C83600FC34F1 /* Default@2x.png in Resources */,
 				ADBEC6441640C83600FC34F1 /* Default-568h@2x.png in Resources */,
 				ADBEC6471640C83600FC34F1 /* MainStoryboard.storyboard in Resources */,
+				ADBEC6991640D6BE00FC34F1 /* rounded_table_cell.png in Resources */,
+				ADBEC69A1640D6BE00FC34F1 /* rounded_table_cell_bottom@2x.png in Resources */,
+				ADBEC69B1640D6BE00FC34F1 /* rounded_table_cell_top@2x.png in Resources */,
+				ADBEC69D1640D77000FC34F1 /* Rounded_text_field.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +371,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADBEC63A1640C83600FC34F1 /* main.m in Sources */,
-				ADBEC63E1640C83600FC34F1 /* RSSAppDelegate.m in Sources */,
-				ADBEC64A1640C83600FC34F1 /* RSSViewController.m in Sources */,
+				ADBEC65C1640CAD100FC34F1 /* RSSMainViewController.m in Sources */,
+				ADBEC65D1640CAD100FC34F1 /* RSSAppDelegate.m in Sources */,
+				ADBEC65E1640CAD100FC34F1 /* RSSWebViewController.m in Sources */,
+				ADBEC6621640CBE900FC34F1 /* RSSRootViewController.m in Sources */,
+				ADBEC6651640CC6F00FC34F1 /* RSSDataModel.xcdatamodeld in Sources */,
+				ADBEC6821640D06000FC34F1 /* ASIAuthenticationDialog.m in Sources */,
+				ADBEC6831640D06000FC34F1 /* ASIDataCompressor.m in Sources */,
+				ADBEC6841640D06000FC34F1 /* ASIDataDecompressor.m in Sources */,
+				ADBEC6851640D06000FC34F1 /* ASIDownloadCache.m in Sources */,
+				ADBEC6861640D06000FC34F1 /* ASIFormDataRequest.m in Sources */,
+				ADBEC6871640D06000FC34F1 /* ASIHTTPRequest.m in Sources */,
+				ADBEC6881640D06000FC34F1 /* ASIInputStream.m in Sources */,
+				ADBEC6891640D06000FC34F1 /* ASINetworkQueue.m in Sources */,
+				ADBEC68A1640D06000FC34F1 /* Reachability.m in Sources */,
+				ADBEC6A21640DB7100FC34F1 /* RSSFeedViewController.m in Sources */,
+				ADBEC6A51640DBA900FC34F1 /* RSSAddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +503,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ADBEC6631640CC6F00FC34F1 /* RSSDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ADBEC6641640CC6F00FC34F1 /* RSSDataModel.xcdatamodel */,
+			);
+			currentVersion = ADBEC6641640CC6F00FC34F1 /* RSSDataModel.xcdatamodel */;
+			path = RSSDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ADBEC6201640C83600FC34F1 /* Project object */;
 }

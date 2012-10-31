@@ -1,23 +1,225 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8ri-ms-QNS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="RSSViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="RSSWebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="bbu-B5-B2A">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="VrA-oU-aRP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1495" y="-60"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="qTf-cp-4QV">
+            <objects>
+                <viewController id="2yv-7O-FRe" customClass="RSSAddViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CUA-du-LlJ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="Rounded_text_field.png" id="nTy-jy-DkO">
+                                <rect key="frame" x="20" y="167" width="280" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="Rounded_text_field.png" id="26v-Qo-Q9W">
+                                <rect key="frame" x="20" y="279" width="280" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Display Name:" minimumFontSize="17" id="yw4-LH-eGM">
+                                <rect key="frame" x="20" y="129" width="124" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="URL:" minimumFontSize="17" id="B7E-x5-HZx">
+                                <rect key="frame" x="20" y="241" width="124" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Show Notifications:" minimumFontSize="17" id="jDC-tM-6wh">
+                                <rect key="frame" x="20" y="353" width="137" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="S22-Fe-ALT">
+                                <rect key="frame" x="122" y="391" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <navigationBar contentMode="scaleToFill" id="8NH-ad-Ubt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add RSS" id="GJM-52-akc">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Arx-8t-CHE">
+                                            <connections>
+                                                <action selector="cancel:" destination="2yv-7O-FRe" id="a69-gj-rnC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="m47-Sp-HlZ">
+                                            <connections>
+                                                <action selector="done:" destination="2yv-7O-FRe" id="Mud-RJ-3Bh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="RSSDisplayName" destination="nTy-jy-DkO" id="G6T-yJ-M56"/>
+                        <outlet property="URL" destination="26v-Qo-Q9W" id="6ne-T0-bZm"/>
+                        <outlet property="showNotifications" destination="S22-Fe-ALT" id="VK4-Eg-RV8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9h-Np-WtI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979" y="-872"/>
+        </scene>
+        <!--Root View Controller - RSS List-->
+        <scene sceneID="dwF-O1-oOE">
+            <objects>
+                <tableViewController id="Ktc-OH-ztr" customClass="RSSRootViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hhf-Tn-8h9">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RfK-gF-OiH">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="5ZR-yh-djL" kind="push" id="lpK-4n-L72"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="RSS List" id="bK1-S9-kWK">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="GVE-Zw-8c8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zOe-jt-gnd">
+                            <connections>
+                                <action selector="AddRSSFeed:" destination="Ktc-OH-ztr" id="bf7-Um-fAB"/>
+                                <segue destination="2yv-7O-FRe" kind="modal" id="Tv0-gu-7Se"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIg-qK-X4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="-60"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="cPV-nU-ji6">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8ri-ms-QNS" customClass="RSSMainViewController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pvf-UG-3Fi">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ktc-OH-ztr" kind="relationship" relationship="rootViewController" id="dWP-hw-6Zi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lia-6v-pTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-201" y="-60"/>
+        </scene>
+        <!--Feed View Controller - Feeds-->
+        <scene sceneID="1wy-9H-cT0">
+            <objects>
+                <tableViewController id="5ZR-yh-djL" customClass="RSSFeedViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yIO-1K-dba">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fcJ-aR-gAP">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="2" kind="push" id="Zzf-L5-4Vn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5ZR-yh-djL" id="6V4-nF-4cE"/>
+                            <outlet property="delegate" destination="5ZR-yh-djL" id="ROb-B5-4Jx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Feeds" id="Wlk-xj-bAZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="2F5-OK-tXq"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AHa-Tm-bB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985" y="-60"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Rounded_text_field.png" width="604" height="122"/>
+    </resources>
+    <classes>
+        <class className="RSSAddViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSAddViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="outlet" name="RSSDisplayName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="URL" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="showNotifications" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="RSSFeedViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSFeedViewController.h"/>
+        </class>
+        <class className="RSSMainViewController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSMainViewController.h"/>
+        </class>
+        <class className="RSSRootViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSRootViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="AddRSSFeed:"/>
+            </relationships>
+        </class>
+        <class className="RSSWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSWebViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

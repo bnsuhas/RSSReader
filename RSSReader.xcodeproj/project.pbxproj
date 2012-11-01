@@ -45,6 +45,10 @@
 		ADBEC6B6164117B700FC34F1 /* RSS_Article.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6B5164117B600FC34F1 /* RSS_Article.m */; };
 		ADBEC6B9164118ED00FC34F1 /* RSSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBEC6B8164118ED00FC34F1 /* RSSUtility.m */; };
 		ADBEC6C316412D2600FC34F1 /* rss.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6C216412D2600FC34F1 /* rss.png */; };
+		ADBEC6C51641308000FC34F1 /* RSS_Reader_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6C41641308000FC34F1 /* RSS_Reader_Logo.png */; };
+		ADBEC6C71641308500FC34F1 /* RSS_Reader_Logo_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6C61641308500FC34F1 /* RSS_Reader_Logo_Retina.png */; };
+		ADD7B0D316422EAF0046C41A /* RSSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD7B0D216422EAF0046C41A /* RSSNetworkManager.m */; };
+		ADD7B0D716424D2E0046C41A /* RSSDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD7B0D616424D2E0046C41A /* RSSDatabaseManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +115,12 @@
 		ADBEC6B7164118ED00FC34F1 /* RSSUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSUtility.h; sourceTree = "<group>"; };
 		ADBEC6B8164118ED00FC34F1 /* RSSUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSUtility.m; sourceTree = "<group>"; };
 		ADBEC6C216412D2600FC34F1 /* rss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rss.png; sourceTree = "<group>"; };
+		ADBEC6C41641308000FC34F1 /* RSS_Reader_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RSS_Reader_Logo.png; path = ../../../RSS_Reader_Logo.png; sourceTree = "<group>"; };
+		ADBEC6C61641308500FC34F1 /* RSS_Reader_Logo_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RSS_Reader_Logo_Retina.png; path = ../../../RSS_Reader_Logo_Retina.png; sourceTree = "<group>"; };
+		ADD7B0D116422EAF0046C41A /* RSSNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSNetworkManager.h; sourceTree = "<group>"; };
+		ADD7B0D216422EAF0046C41A /* RSSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSNetworkManager.m; sourceTree = "<group>"; };
+		ADD7B0D516424D2E0046C41A /* RSSDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSDatabaseManager.h; sourceTree = "<group>"; };
+		ADD7B0D616424D2E0046C41A /* RSSDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSDatabaseManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +213,8 @@
 				ADBEC6591640CAD100FC34F1 /* WebViewController */,
 				ADBEC66A1640D06000FC34F1 /* ASIHTTPRequest */,
 				ADBEC6B0164117AC00FC34F1 /* Model */,
+				ADD7B0CF16422E9B0046C41A /* NetworkRealted */,
+				ADD7B0D416424D1A0046C41A /* DatabaseRelated */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -284,6 +296,8 @@
 			isa = PBXGroup;
 			children = (
 				ADBEC6C216412D2600FC34F1 /* rss.png */,
+				ADBEC6C61641308500FC34F1 /* RSS_Reader_Logo_Retina.png */,
+				ADBEC6C41641308000FC34F1 /* RSS_Reader_Logo.png */,
 				ADBEC6951640D6BE00FC34F1 /* Add New RSS */,
 			);
 			path = Images;
@@ -327,6 +341,24 @@
 				ADBEC6B2164117B600FC34F1 /* RSS_Feed.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ADD7B0CF16422E9B0046C41A /* NetworkRealted */ = {
+			isa = PBXGroup;
+			children = (
+				ADD7B0D116422EAF0046C41A /* RSSNetworkManager.h */,
+				ADD7B0D216422EAF0046C41A /* RSSNetworkManager.m */,
+			);
+			path = NetworkRealted;
+			sourceTree = "<group>";
+		};
+		ADD7B0D416424D1A0046C41A /* DatabaseRelated */ = {
+			isa = PBXGroup;
+			children = (
+				ADD7B0D516424D2E0046C41A /* RSSDatabaseManager.h */,
+				ADD7B0D616424D2E0046C41A /* RSSDatabaseManager.m */,
+			);
+			path = DatabaseRelated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +423,8 @@
 				ADBEC69B1640D6BE00FC34F1 /* rounded_table_cell_top@2x.png in Resources */,
 				ADBEC69D1640D77000FC34F1 /* Rounded_text_field.png in Resources */,
 				ADBEC6C316412D2600FC34F1 /* rss.png in Resources */,
+				ADBEC6C51641308000FC34F1 /* RSS_Reader_Logo.png in Resources */,
+				ADBEC6C71641308500FC34F1 /* RSS_Reader_Logo_Retina.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +455,8 @@
 				ADBEC6B3164117B600FC34F1 /* RSS_Feed.m in Sources */,
 				ADBEC6B6164117B700FC34F1 /* RSS_Article.m in Sources */,
 				ADBEC6B9164118ED00FC34F1 /* RSSUtility.m in Sources */,
+				ADD7B0D316422EAF0046C41A /* RSSNetworkManager.m in Sources */,
+				ADD7B0D716424D2E0046C41A /* RSSDatabaseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +571,7 @@
 				ADBEC64F1640C83600FC34F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

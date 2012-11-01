@@ -21,6 +21,10 @@
     id<RSSAddViewControllerDelegate> delegate_;
 }
 
+@property (retain, nonatomic) IBOutlet UINavigationBar *navigationBar;
+
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @property (assign, nonatomic) id<RSSAddViewControllerDelegate> delegate;
 
 @property (retain, nonatomic) IBOutlet UITextField *RSSDisplayName;

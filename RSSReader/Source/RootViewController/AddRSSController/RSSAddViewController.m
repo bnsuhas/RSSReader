@@ -60,6 +60,8 @@
     [_URL release];
     [_showNotifications release];
     self.delegate = nil;
+    [_scrollView release];
+    [_navigationBar release];
     [super dealloc];
 }
 

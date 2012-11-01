@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RSS_Feed.h"
+#import "RSS_Article.h"
 
 @interface RSSFeedViewController : UITableViewController
+{
+    RSS_Feed *selectedRSSFeed_;
+}
+
+@property(nonatomic, retain) RSS_Feed *selectedRSSFeed;
 
 @end

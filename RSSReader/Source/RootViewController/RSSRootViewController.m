@@ -7,6 +7,8 @@
 //
 
 #import "RSSRootViewController.h"
+#import "RSSFeedViewController.h"
+#import "RSSNetworkManager.h"
 #import "RSS_Feed.h"
 
 @interface RSSRootViewController ()
@@ -70,7 +72,7 @@
     
     if(nil == cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"RootViewCell"];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"RootViewCell"] autorelease];
     }
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RSS_Feed"];
@@ -81,9 +83,10 @@
     
     cell.textLabel.text = [(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] name];
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
     cell.detailTextLabel.text = [(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] feed_url];
+    
+    [[RSSNetworkManager sharedNetworkManager] fetchAllFeedsForRSSWithURL:
+     [NSURL URLWithString:[(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] feed_url]]];
     
     return cell;
 }
@@ -102,19 +105,6 @@
 }
 */
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
-}
 
 #pragma mark - View Controller delegate
 
@@ -123,6 +113,16 @@
     if([segue.destinationViewController isKindOfClass:[RSSAddViewController class]])
     {
         [(RSSAddViewController *)segue.destinationViewController setDelegate:self];
+    }
+    
+    else if([segue.destinationViewController isKindOfClass:[RSSFeedViewController class]])
+    {
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RSS_Feed"];
+        
+        NSArray *feedsArray = [[RSSUtility managedObjectContext] executeFetchRequest:request error:nil];
+        
+        [(RSSFeedViewController *)segue.destinationViewController setSelectedRSSFeed:
+         [feedsArray objectAtIndex:[[self.tableView indexPathForSelectedRow] row]]];
     }
 }
 

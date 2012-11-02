@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD36211F16436BF900013E40 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD36211E16436BF900013E40 /* libxml2.dylib */; };
+		AD36212316436CEC00013E40 /* GDataXMLElement+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36212216436CEC00013E40 /* GDataXMLElement+Extras.m */; };
+		AD36212716436ECB00013E40 /* RSSXMLParsingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36212616436ECB00013E40 /* RSSXMLParsingManager.m */; };
 		ADBEC62E1640C83600FC34F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC62D1640C83600FC34F1 /* UIKit.framework */; };
 		ADBEC6301640C83600FC34F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC62F1640C83600FC34F1 /* Foundation.framework */; };
 		ADBEC6321640C83600FC34F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC6311640C83600FC34F1 /* CoreGraphics.framework */; };
@@ -49,9 +52,15 @@
 		ADBEC6C71641308500FC34F1 /* RSS_Reader_Logo_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6C61641308500FC34F1 /* RSS_Reader_Logo_Retina.png */; };
 		ADD7B0D316422EAF0046C41A /* RSSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD7B0D216422EAF0046C41A /* RSSNetworkManager.m */; };
 		ADD7B0D716424D2E0046C41A /* RSSDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD7B0D616424D2E0046C41A /* RSSDatabaseManager.m */; };
+		ADD7B0E5164281B60046C41A /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD7B0E4164281B60046C41A /* GDataXMLNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD36211E16436BF900013E40 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		AD36212116436CEC00013E40 /* GDataXMLElement+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLElement+Extras.h"; sourceTree = "<group>"; };
+		AD36212216436CEC00013E40 /* GDataXMLElement+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLElement+Extras.m"; sourceTree = "<group>"; };
+		AD36212516436ECB00013E40 /* RSSXMLParsingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSXMLParsingManager.h; sourceTree = "<group>"; };
+		AD36212616436ECB00013E40 /* RSSXMLParsingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSXMLParsingManager.m; sourceTree = "<group>"; };
 		ADBEC6291640C83600FC34F1 /* RSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBEC62D1640C83600FC34F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ADBEC62F1640C83600FC34F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +130,8 @@
 		ADD7B0D216422EAF0046C41A /* RSSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSNetworkManager.m; sourceTree = "<group>"; };
 		ADD7B0D516424D2E0046C41A /* RSSDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSDatabaseManager.h; sourceTree = "<group>"; };
 		ADD7B0D616424D2E0046C41A /* RSSDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSDatabaseManager.m; sourceTree = "<group>"; };
+		ADD7B0E3164281B60046C41A /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		ADD7B0E4164281B60046C41A /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD36211F16436BF900013E40 /* libxml2.dylib in Frameworks */,
 				ADBEC6AF164116BC00FC34F1 /* CoreData.framework in Frameworks */,
 				ADBEC6921640D0B000FC34F1 /* libz.dylib in Frameworks */,
 				ADBEC6901640D0A800FC34F1 /* MobileCoreServices.framework in Frameworks */,
@@ -142,9 +154,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD36212416436EB200013E40 /* XMLParsingManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD36212516436ECB00013E40 /* RSSXMLParsingManager.h */,
+				AD36212616436ECB00013E40 /* RSSXMLParsingManager.m */,
+			);
+			path = XMLParsingManager;
+			sourceTree = "<group>";
+		};
 		ADBEC61E1640C83600FC34F1 = {
 			isa = PBXGroup;
 			children = (
+				AD36211E16436BF900013E40 /* libxml2.dylib */,
 				ADBEC6331640C83600FC34F1 /* RSSReader */,
 				ADBEC62C1640C83600FC34F1 /* Frameworks */,
 				ADBEC62A1640C83600FC34F1 /* Products */,
@@ -212,6 +234,8 @@
 				ADBEC69F1640DB5D00FC34F1 /* FeedViewController */,
 				ADBEC6591640CAD100FC34F1 /* WebViewController */,
 				ADBEC66A1640D06000FC34F1 /* ASIHTTPRequest */,
+				ADD7B0E2164281B60046C41A /* GDataXML */,
+				AD36212416436EB200013E40 /* XMLParsingManager */,
 				ADBEC6B0164117AC00FC34F1 /* Model */,
 				ADD7B0CF16422E9B0046C41A /* NetworkRealted */,
 				ADD7B0D416424D1A0046C41A /* DatabaseRelated */,
@@ -361,6 +385,17 @@
 			path = DatabaseRelated;
 			sourceTree = "<group>";
 		};
+		ADD7B0E2164281B60046C41A /* GDataXML */ = {
+			isa = PBXGroup;
+			children = (
+				ADD7B0E3164281B60046C41A /* GDataXMLNode.h */,
+				ADD7B0E4164281B60046C41A /* GDataXMLNode.m */,
+				AD36212116436CEC00013E40 /* GDataXMLElement+Extras.h */,
+				AD36212216436CEC00013E40 /* GDataXMLElement+Extras.m */,
+			);
+			path = GDataXML;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -457,6 +492,9 @@
 				ADBEC6B9164118ED00FC34F1 /* RSSUtility.m in Sources */,
 				ADD7B0D316422EAF0046C41A /* RSSNetworkManager.m in Sources */,
 				ADD7B0D716424D2E0046C41A /* RSSDatabaseManager.m in Sources */,
+				ADD7B0E5164281B60046C41A /* GDataXMLNode.m in Sources */,
+				AD36212316436CEC00013E40 /* GDataXMLElement+Extras.m in Sources */,
+				AD36212716436ECB00013E40 /* RSSXMLParsingManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,7 +573,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSSReader/RSSReader-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "RSSReader/RSSReader-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -546,7 +586,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSSReader/RSSReader-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "RSSReader/RSSReader-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

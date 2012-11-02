@@ -9,6 +9,7 @@
 #import "RSSNetworkManager.h"
 #import "ASIHTTPRequest.h"
 #import "RSSDatabaseManager.h"
+#import "RSSXMLParsingManager.h"
 
 static RSSNetworkManager *sharedNetworkManager = nil;
 
@@ -97,12 +98,11 @@ static RSSNetworkManager *sharedNetworkManager = nil;
 
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
-    RSS_Article *article = [[RSSDatabaseManager sharedDatabaseManager] createArticleWithName:request.url.absoluteString andURL:request.url];
+    RSSXMLParsingManager *xmlParsingMAnager = [[RSSXMLParsingManager alloc] initWithXMLData:[request responseData] fromURL:request.url];
     
-    RSS_Feed *feed = [[RSSDatabaseManager sharedDatabaseManager] feedObjectForURL:request.url];
-    
-    article.feed = feed;
+    [xmlParsingMAnager performSelectorInBackground:@selector(parse) withObject:nil];
 }
+    
 
 - (void)requestFailed:(ASIHTTPRequest *)request
 {

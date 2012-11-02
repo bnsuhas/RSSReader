@@ -70,15 +70,21 @@ static RSSDatabaseManager *sharedDatabaseManager = nil;
 
 #pragma mark - Instance Methods
 
--(RSS_Article *)createArticleWithName:(NSString *)inArticleName andURL:(NSURL *)inURL
+-(RSS_Article *)createArticleWithName:(NSString *)inArticleName URL:(NSString *)inURL date:(NSDate *)inDate sourceURL:(NSURL *)inSourceURL;
 {
     NSManagedObjectContext *context = [RSSUtility managedObjectContext];
     
     RSS_Article *article = [NSEntityDescription insertNewObjectForEntityForName:@"RSS_Article" inManagedObjectContext:context];
     
-    article.name = [inURL absoluteString];
+    article.name = inArticleName;
     
-    article.article_url = [inURL absoluteString];
+    article.article_url = inURL;
+    
+    article.date = inDate;
+    
+    article.isRead = [NSNumber numberWithBool:NO];
+    
+    article.feed = [self feedObjectForURL:inSourceURL];
     
     [context save:nil];
     

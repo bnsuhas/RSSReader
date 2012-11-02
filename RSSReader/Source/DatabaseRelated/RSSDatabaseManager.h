@@ -13,7 +13,7 @@
 
 +(RSSDatabaseManager *)sharedDatabaseManager;
 
--(RSS_Article *)createArticleWithName:(NSString *)inArticleName andURL:(NSURL *)inURL;
+-(RSS_Article *)createArticleWithName:(NSString *)inArticleName URL:(NSString *)inURL date:(NSDate *)inDate sourceURL:(NSURL *)inSourceURL;
 
 -(RSS_Feed *)feedObjectForURL:(NSURL *)inURL;
 

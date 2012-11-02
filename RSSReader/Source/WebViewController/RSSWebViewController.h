@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RSS_Article.h"
 
 @interface RSSWebViewController : UIViewController
+{
+    RSS_Article *articleToDisplay_;
+}
+
+@property (retain, nonatomic) IBOutlet UIWebView *webView;
+
+@property(nonatomic, retain) RSS_Article *articleToDisplay;
 
 @end

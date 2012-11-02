@@ -7,6 +7,8 @@
 //
 
 #import "RSSFeedViewController.h"
+#import "RSSWebViewController.h"
+#import "RSSFeedViewCell.h"
 
 @interface RSSFeedViewController ()
 
@@ -58,18 +60,20 @@
 {
     static NSString *CellIdentifier = @"FeedViewCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    RSSFeedViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if(nil == cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"FeedViewCell"];
+        cell = [[RSSFeedViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"FeedViewCell"];
     }
     
     RSS_Article *article = [[self.selectedRSSFeed.articles allObjects] objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = article.name;
+    cell.titleTextField.text = article.name;
     
-    cell.detailTextLabel.text = article.article_url;
+    cell.subtitleTextField.text = article.article_url;
+    
+    cell.unreadImageView.image = [UIImage imageNamed:@"orange-ball"];
     
     return cell;
 }
@@ -79,6 +83,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
+}
+
+#pragma mark - View Controller delegate
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.destinationViewController isKindOfClass:[RSSWebViewController class]])
+    {
+        RSS_Article *article = [[self.selectedRSSFeed.articles allObjects] objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+        
+        [(RSSWebViewController *)segue.destinationViewController setArticleToDisplay:article];
+    }
 }
 
 @end

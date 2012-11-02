@@ -10,6 +10,7 @@
 #import "RSSFeedViewController.h"
 #import "RSSNetworkManager.h"
 #import "RSS_Feed.h"
+#import "RSSRootViewCell.h"
 
 @interface RSSRootViewController ()
 
@@ -68,22 +69,22 @@
 {
     static NSString *CellIdentifier = @"RootViewCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    RSSRootViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if(nil == cell)
     {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"RootViewCell"] autorelease];
+        cell = [[[RSSRootViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"RootViewCell"] autorelease];
     }
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RSS_Feed"];
     
     NSArray *feedsArray = [[RSSUtility managedObjectContext] executeFetchRequest:request error:nil];
     
-    cell.imageView.image = [UIImage imageNamed:@"rss"];
+    cell.rssImageView.image = [UIImage imageNamed:@"rss"];
     
-    cell.textLabel.text = [(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] name];
+    cell.titleTextField.text = [(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] name];
     
-    cell.detailTextLabel.text = [(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] feed_url];
+    cell.subtitleTextField.text = [(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] feed_url];
     
     [[RSSNetworkManager sharedNetworkManager] fetchAllFeedsForRSSWithURL:
      [NSURL URLWithString:[(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] feed_url]]];

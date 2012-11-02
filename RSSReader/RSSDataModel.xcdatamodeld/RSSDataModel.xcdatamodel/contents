@@ -10,11 +10,12 @@
     <entity name="RSS_Feed" representedClassName="RSS_Feed" syncable="YES">
         <attribute name="displayNotifications" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="feed_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isNew" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="articles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RSS_Article" inverseName="feed" inverseEntity="RSS_Article" syncable="YES"/>
     </entity>
     <elements>
-        <element name="RSS_Article" positionX="180" positionY="-63" width="128" height="118"/>
-        <element name="RSS_Feed" positionX="-54" positionY="-18" width="128" height="103"/>
+        <element name="RSS_Article" positionX="189" positionY="-18" width="128" height="118"/>
+        <element name="RSS_Feed" positionX="-54" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

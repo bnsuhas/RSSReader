@@ -11,6 +11,7 @@
 #import "RSSNetworkManager.h"
 #import "RSS_Feed.h"
 #import "RSSRootViewCell.h"
+#import "RSSDatabaseManager.h"
 
 @interface RSSRootViewController ()
 
@@ -80,14 +81,23 @@
     
     NSArray *feedsArray = [[RSSUtility managedObjectContext] executeFetchRequest:request error:nil];
     
-    cell.rssImageView.image = [UIImage imageNamed:@"rss"];
+    RSS_Feed *feed = [feedsArray objectAtIndex:[indexPath row]];
     
-    cell.titleTextField.text = [(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] name];
+    if([feed.isNew boolValue])
+    {
+        cell.rssImageView.image = [UIImage imageNamed:@"rss_new"];
+    }
     
-    cell.subtitleTextField.text = [(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] feed_url];
+    else
+    {
+        cell.rssImageView.image = [UIImage imageNamed:@"rss"];
+    }
     
-    [[RSSNetworkManager sharedNetworkManager] fetchAllFeedsForRSSWithURL:
-     [NSURL URLWithString:[(RSS_Feed *)[feedsArray objectAtIndex:[indexPath row]] feed_url]]];
+    cell.titleTextField.text = [feed name];
+    
+    cell.subtitleTextField.text = [feed feed_url];
+    
+    [[RSSNetworkManager sharedNetworkManager] fetchAllFeedsForRSSWithURL:[NSURL URLWithString:[feed feed_url]]];
     
     return cell;
 }
@@ -118,12 +128,18 @@
     
     else if([segue.destinationViewController isKindOfClass:[RSSFeedViewController class]])
     {
-        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RSS_Feed"];
+        NSArray *feedsArray = [[RSSDatabaseManager sharedDatabaseManager] allFeeds];
         
-        NSArray *feedsArray = [[RSSUtility managedObjectContext] executeFetchRequest:request error:nil];
+        RSS_Feed *feed = [feedsArray objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
         
-        [(RSSFeedViewController *)segue.destinationViewController setSelectedRSSFeed:
-         [feedsArray objectAtIndex:[[self.tableView indexPathForSelectedRow] row]]];
+        if ([feed.isNew boolValue])
+        {
+            feed.isNew = [NSNumber numberWithBool:NO];
+            
+            [[RSSUtility managedObjectContext] save:nil];
+        }
+        
+        [(RSSFeedViewController *)segue.destinationViewController setSelectedRSSFeed:feed];
     }
 }
 
@@ -132,6 +148,8 @@
 -(void)didFinishAddingNewRSS:(RSSAddViewController *)inSender
 {
     [inSender dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.tableView reloadData];
 }
 
 @end

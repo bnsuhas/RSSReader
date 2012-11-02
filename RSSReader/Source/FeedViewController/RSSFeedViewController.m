@@ -73,7 +73,10 @@
     
     cell.subtitleTextField.text = article.article_url;
     
-    cell.unreadImageView.image = [UIImage imageNamed:@"orange-ball"];
+    if(![article.isRead boolValue])
+    {
+        cell.unreadImageView.image = [UIImage imageNamed:@"orange-ball"];
+    }
     
     return cell;
 }

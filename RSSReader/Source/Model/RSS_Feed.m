@@ -2,7 +2,7 @@
 //  RSS_Feed.m
 //  RSSReader
 //
-//  Created by Suhas on 1/11/12.
+//  Created by Suhas on 2/11/12.
 //  Copyright (c) 2012 Exilant Technologies Pvt Ltd. All rights reserved.
 //
 
@@ -15,6 +15,7 @@
 @dynamic displayNotifications;
 @dynamic feed_url;
 @dynamic name;
+@dynamic isNew;
 @dynamic articles;
 
 @end

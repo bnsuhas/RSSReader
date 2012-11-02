@@ -13,6 +13,7 @@
 		AD36212A164381DC00013E40 /* RSSRootViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD362129164381DC00013E40 /* RSSRootViewCell.m */; };
 		AD36212D164381F800013E40 /* RSSFeedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36212C164381F800013E40 /* RSSFeedViewCell.m */; };
 		AD36212F1643898600013E40 /* orange-ball.png in Resources */ = {isa = PBXBuildFile; fileRef = AD36212E1643898600013E40 /* orange-ball.png */; };
+		AD3621311643A93D00013E40 /* rss_new.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3621301643A93D00013E40 /* rss_new.png */; };
 		ADBEC62E1640C83600FC34F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC62D1640C83600FC34F1 /* UIKit.framework */; };
 		ADBEC6301640C83600FC34F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC62F1640C83600FC34F1 /* Foundation.framework */; };
 		ADBEC6321640C83600FC34F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBEC6311640C83600FC34F1 /* CoreGraphics.framework */; };
@@ -69,6 +70,7 @@
 		AD36212B164381F800013E40 /* RSSFeedViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSFeedViewCell.h; sourceTree = "<group>"; };
 		AD36212C164381F800013E40 /* RSSFeedViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSFeedViewCell.m; sourceTree = "<group>"; };
 		AD36212E1643898600013E40 /* orange-ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange-ball.png"; sourceTree = "<group>"; };
+		AD3621301643A93D00013E40 /* rss_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rss_new.png; sourceTree = "<group>"; };
 		ADBEC6291640C83600FC34F1 /* RSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBEC62D1640C83600FC34F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ADBEC62F1640C83600FC34F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -174,7 +176,6 @@
 		ADBEC61E1640C83600FC34F1 = {
 			isa = PBXGroup;
 			children = (
-				AD36211E16436BF900013E40 /* libxml2.dylib */,
 				ADBEC6331640C83600FC34F1 /* RSSReader */,
 				ADBEC62C1640C83600FC34F1 /* Frameworks */,
 				ADBEC62A1640C83600FC34F1 /* Products */,
@@ -193,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				ADBEC6AE164116BC00FC34F1 /* CoreData.framework */,
+				AD36211E16436BF900013E40 /* libxml2.dylib */,
 				ADBEC6911640D0B000FC34F1 /* libz.dylib */,
 				ADBEC68F1640D0A800FC34F1 /* MobileCoreServices.framework */,
 				ADBEC68D1640D09F00FC34F1 /* SystemConfiguration.framework */,
@@ -330,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				AD36212E1643898600013E40 /* orange-ball.png */,
+				AD3621301643A93D00013E40 /* rss_new.png */,
 				ADBEC6C216412D2600FC34F1 /* rss.png */,
 				ADBEC6C61641308500FC34F1 /* RSS_Reader_Logo_Retina.png */,
 				ADBEC6C41641308000FC34F1 /* RSS_Reader_Logo.png */,
@@ -474,6 +477,7 @@
 				ADBEC6C51641308000FC34F1 /* RSS_Reader_Logo.png in Resources */,
 				ADBEC6C71641308500FC34F1 /* RSS_Reader_Logo_Retina.png in Resources */,
 				AD36212F1643898600013E40 /* orange-ball.png in Resources */,
+				AD3621311643A93D00013E40 /* rss_new.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

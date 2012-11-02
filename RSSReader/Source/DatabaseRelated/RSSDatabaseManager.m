@@ -70,6 +70,32 @@ static RSSDatabaseManager *sharedDatabaseManager = nil;
 
 #pragma mark - Instance Methods
 
+-(NSArray *)allFeeds
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RSS_Feed"];
+    
+    return [[RSSUtility managedObjectContext] executeFetchRequest:request error:nil];
+}
+
+-(RSS_Feed *)createNewFeedWithDisplayName:(NSString *)inDisplayName url:(NSString *)inURL
+{
+    NSManagedObjectContext *context = [RSSUtility managedObjectContext];
+    
+    RSS_Feed *newFeed = [NSEntityDescription insertNewObjectForEntityForName:@"RSS_Feed" inManagedObjectContext:context];
+    
+    newFeed.name = inDisplayName;
+    
+    newFeed.feed_url = inURL;
+    
+    newFeed.displayNotifications = [NSNumber numberWithBool:YES];
+    
+    newFeed.isNew = [NSNumber numberWithBool:YES];
+    
+    [context save:nil];
+    
+    return newFeed;
+}
+
 -(RSS_Article *)createArticleWithName:(NSString *)inArticleName URL:(NSString *)inURL date:(NSDate *)inDate sourceURL:(NSURL *)inSourceURL;
 {
     NSManagedObjectContext *context = [RSSUtility managedObjectContext];

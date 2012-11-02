@@ -2,7 +2,7 @@
 //  RSS_Feed.h
 //  RSSReader
 //
-//  Created by Suhas on 1/11/12.
+//  Created by Suhas on 2/11/12.
 //  Copyright (c) 2012 Exilant Technologies Pvt Ltd. All rights reserved.
 //
 
@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSNumber * displayNotifications;
 @property (nonatomic, retain) NSString * feed_url;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSNumber * isNew;
 @property (nonatomic, retain) NSSet *articles;
 @end
 

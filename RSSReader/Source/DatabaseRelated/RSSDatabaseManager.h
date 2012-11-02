@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "RSS_Article.h"
+#import "RSS_Feed.h"
 
 @interface RSSDatabaseManager : NSObject
 
 +(RSSDatabaseManager *)sharedDatabaseManager;
+
+-(NSArray *)allFeeds;
+
+-(RSS_Feed *)createNewFeedWithDisplayName:(NSString *)inDisplayName url:(NSString *)inURL;
 
 -(RSS_Article *)createArticleWithName:(NSString *)inArticleName URL:(NSString *)inURL date:(NSDate *)inDate sourceURL:(NSURL *)inSourceURL;
 

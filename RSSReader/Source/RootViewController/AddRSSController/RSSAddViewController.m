@@ -8,6 +8,7 @@
 
 #import "RSSAddViewController.h"
 #import "RSS_Feed.h"
+#import "RSSDatabaseManager.h"
 
 @interface RSSAddViewController ()
 
@@ -36,17 +37,34 @@
 
 - (IBAction)done:(id)sender
 {
-    RSS_Feed *newFeed = [NSEntityDescription insertNewObjectForEntityForName:@"RSS_Feed" inManagedObjectContext:[RSSUtility managedObjectContext]];
+    if(!self.RSSDisplayName.text.length)
+    {
+        UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:@"RSS title cannot be blank."
+                                                            message:@"Please provide a title for the RSS feed."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil, nil] autorelease];
+        
+        [alertView show];
+    }
     
-    newFeed.name = self.RSSDisplayName.text;
+    else if(!self.URL.text.length)
+    {
+        UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:@"URL cannot be blank."
+                                                             message:@"Please provide a URL for the RSS feed."
+                                                            delegate:nil
+                                                   cancelButtonTitle:@"OK"
+                                                   otherButtonTitles:nil, nil] autorelease];
+        
+        [alertView show];
+    }
     
-    newFeed.feed_url = self.URL.text;
+    else
+    {
+        [[RSSDatabaseManager sharedDatabaseManager] createNewFeedWithDisplayName:self.RSSDisplayName.text url:self.URL.text];
     
-    newFeed.displayNotifications = [NSNumber numberWithBool:self.showNotifications.on];
-    
-    [[RSSUtility managedObjectContext] save:nil];
-    
-    [self.delegate didFinishAddingNewRSS:self];
+        [self.delegate didFinishAddingNewRSS:self];
+    }
 }
 
 - (IBAction)cancel:(id)sender

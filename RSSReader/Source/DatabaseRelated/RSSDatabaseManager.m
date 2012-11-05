@@ -77,6 +77,17 @@ static RSSDatabaseManager *sharedDatabaseManager = nil;
     return [[RSSUtility managedObjectContext] executeFetchRequest:request error:nil];
 }
 
+-(NSNumber *)unreadArticlesInFeed:(RSS_Feed*)inFeed
+{
+    NSArray *articlesArray = [inFeed.articles allObjects];
+    
+    NSPredicate *unreadArticlesPredicate = [NSPredicate predicateWithFormat:@"isRead.boolValue = 0"];
+    
+    int count = [[articlesArray filteredArrayUsingPredicate:unreadArticlesPredicate] count];
+    
+    return [NSNumber numberWithInt:count];
+}
+
 -(RSS_Feed *)createNewFeedWithDisplayName:(NSString *)inDisplayName url:(NSString *)inURL
 {
     NSManagedObjectContext *context = [RSSUtility managedObjectContext];

@@ -16,6 +16,8 @@
 
 -(NSArray *)allFeeds;
 
+-(NSNumber *)unreadArticlesInFeed:(RSS_Feed*)inFeed;
+
 -(RSS_Feed *)createNewFeedWithDisplayName:(NSString *)inDisplayName url:(NSString *)inURL;
 
 -(RSS_Article *)createArticleWithName:(NSString *)inArticleName URL:(NSString *)inURL date:(NSDate *)inDate sourceURL:(NSURL *)inSourceURL;

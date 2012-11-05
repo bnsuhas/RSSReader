@@ -9,6 +9,7 @@
 #import "RSSFeedViewController.h"
 #import "RSSWebViewController.h"
 #import "RSSFeedViewCell.h"
+#import "RSSNetworkManager.h"
 
 @interface RSSFeedViewController ()
 
@@ -30,6 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[RSSNetworkManager sharedNetworkManager] fetchAllFeedsForRSSWithURL:[NSURL URLWithString:[self.selectedRSSFeed feed_url]]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

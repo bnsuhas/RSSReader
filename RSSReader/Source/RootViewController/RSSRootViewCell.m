@@ -32,6 +32,7 @@
     [_subtitleTextField release];
     [_unreadCountField release];
     [_rssImageView release];
+    [_UnreadCountBackgroundView release];
     [super dealloc];
 }
 @end

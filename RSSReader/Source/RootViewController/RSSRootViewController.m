@@ -8,7 +8,6 @@
 
 #import "RSSRootViewController.h"
 #import "RSSFeedViewController.h"
-#import "RSSNetworkManager.h"
 #import "RSS_Feed.h"
 #import "RSSRootViewCell.h"
 #import "RSSDatabaseManager.h"
@@ -48,6 +47,13 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.RSSFeedsArray = [[RSSDatabaseManager sharedDatabaseManager] allFeeds];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,18 +99,24 @@
     if([feed.isNew boolValue])
     {
         cell.rssImageView.image = [UIImage imageNamed:@"rss_new"];
+        
+        [cell.UnreadCountBackgroundView setHidden:YES];
     }
     
     else
     {
         cell.rssImageView.image = [UIImage imageNamed:@"rss"];
+        
+        [cell.UnreadCountBackgroundView setHidden:NO];
+        
+        NSNumber *unreadCount = [[RSSDatabaseManager sharedDatabaseManager] unreadArticlesInFeed:feed];
+        
+        cell.unreadCountField.text = [unreadCount stringValue];
     }
     
     cell.titleTextField.text = [feed name];
     
     cell.subtitleTextField.text = [feed feed_url];
-    
-    [[RSSNetworkManager sharedNetworkManager] fetchAllFeedsForRSSWithURL:[NSURL URLWithString:[feed feed_url]]];
     
     return cell;
 }

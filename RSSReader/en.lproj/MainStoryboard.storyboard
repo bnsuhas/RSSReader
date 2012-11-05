@@ -171,6 +171,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
+                                    <outlet property="UnreadCountBackgroundView" destination="Nai-sS-EC2" id="yOh-zQ-ZvP"/>
                                     <outlet property="imageView" destination="Vad-PL-2aI" id="O3i-dY-oOV"/>
                                     <outlet property="rssImageView" destination="Vad-PL-2aI" id="yNc-BW-sED"/>
                                     <outlet property="subtitleTextField" destination="1ow-Ze-Al8" id="iYQ-bN-Hct"/>
@@ -301,6 +302,7 @@
         <class className="RSSRootViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSRootViewCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="UnreadCountBackgroundView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="rssImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="subtitleTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="titleTextField" candidateClass="UITextField"/>

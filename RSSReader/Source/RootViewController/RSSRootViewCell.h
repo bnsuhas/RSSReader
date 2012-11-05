@@ -18,4 +18,6 @@
 
 @property (retain, nonatomic) IBOutlet UITextField *unreadCountField;
 
+@property (retain, nonatomic) IBOutlet UIView *UnreadCountBackgroundView;
+
 @end

@@ -19,6 +19,8 @@
 
 @implementation RSSRootViewController
 
+@synthesize RSSFeedsArray = RSSFeedsArray_;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -28,15 +30,24 @@
     return self;
 }
 
+-(void)dealloc
+{
+    self.RSSFeedsArray = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.RSSFeedsArray = [[RSSDatabaseManager sharedDatabaseManager] allFeeds];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,11 +88,7 @@
         cell = [[[RSSRootViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"RootViewCell"] autorelease];
     }
     
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RSS_Feed"];
-    
-    NSArray *feedsArray = [[RSSUtility managedObjectContext] executeFetchRequest:request error:nil];
-    
-    RSS_Feed *feed = [feedsArray objectAtIndex:[indexPath row]];
+    RSS_Feed *feed = [self.RSSFeedsArray objectAtIndex:[indexPath row]];
     
     if([feed.isNew boolValue])
     {
@@ -128,9 +135,7 @@
     
     else if([segue.destinationViewController isKindOfClass:[RSSFeedViewController class]])
     {
-        NSArray *feedsArray = [[RSSDatabaseManager sharedDatabaseManager] allFeeds];
-        
-        RSS_Feed *feed = [feedsArray objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+        RSS_Feed *feed = [self.RSSFeedsArray objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
         
         if ([feed.isNew boolValue])
         {
@@ -148,6 +153,8 @@
 -(void)didFinishAddingNewRSS:(RSSAddViewController *)inSender
 {
     [inSender dismissViewControllerAnimated:YES completion:nil];
+    
+    self.RSSFeedsArray = [[RSSDatabaseManager sharedDatabaseManager] allFeeds];
     
     [self.tableView reloadData];
 }

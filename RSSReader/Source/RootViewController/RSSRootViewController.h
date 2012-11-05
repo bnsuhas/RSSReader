@@ -10,6 +10,11 @@
 #import "RSSAddViewController.h"
 
 @interface RSSRootViewController : UITableViewController <RSSAddViewControllerDelegate>
+{
+    NSArray *RSSFeedsArray_;
+}
+
+@property(nonatomic, retain) NSArray *RSSFeedsArray;
 
 - (IBAction)AddRSSFeed:(id)sender;
 

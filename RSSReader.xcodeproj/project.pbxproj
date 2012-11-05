@@ -54,6 +54,7 @@
 		ADBEC6C316412D2600FC34F1 /* rss.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6C216412D2600FC34F1 /* rss.png */; };
 		ADBEC6C51641308000FC34F1 /* RSS_Reader_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6C41641308000FC34F1 /* RSS_Reader_Logo.png */; };
 		ADBEC6C71641308500FC34F1 /* RSS_Reader_Logo_Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBEC6C61641308500FC34F1 /* RSS_Reader_Logo_Retina.png */; };
+		ADCB00351647608E00BBF66D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCB00341647608E00BBF66D /* TPKeyboardAvoidingScrollView.m */; };
 		ADD7B0D316422EAF0046C41A /* RSSNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD7B0D216422EAF0046C41A /* RSSNetworkManager.m */; };
 		ADD7B0D716424D2E0046C41A /* RSSDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD7B0D616424D2E0046C41A /* RSSDatabaseManager.m */; };
 		ADD7B0E5164281B60046C41A /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD7B0E4164281B60046C41A /* GDataXMLNode.m */; };
@@ -136,6 +137,8 @@
 		ADBEC6C216412D2600FC34F1 /* rss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rss.png; sourceTree = "<group>"; };
 		ADBEC6C41641308000FC34F1 /* RSS_Reader_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RSS_Reader_Logo.png; path = ../../../RSS_Reader_Logo.png; sourceTree = "<group>"; };
 		ADBEC6C61641308500FC34F1 /* RSS_Reader_Logo_Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RSS_Reader_Logo_Retina.png; path = ../../../RSS_Reader_Logo_Retina.png; sourceTree = "<group>"; };
+		ADCB00331647608E00BBF66D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		ADCB00341647608E00BBF66D /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		ADD7B0D116422EAF0046C41A /* RSSNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSNetworkManager.h; sourceTree = "<group>"; };
 		ADD7B0D216422EAF0046C41A /* RSSNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSNetworkManager.m; sourceTree = "<group>"; };
 		ADD7B0D516424D2E0046C41A /* RSSDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSDatabaseManager.h; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				ADBEC6581640CAD100FC34F1 /* RSSAppDelegate.m */,
 				ADBEC6B7164118ED00FC34F1 /* RSSUtility.h */,
 				ADBEC6B8164118ED00FC34F1 /* RSSUtility.m */,
+				ADCB00331647608E00BBF66D /* TPKeyboardAvoidingScrollView.h */,
+				ADCB00341647608E00BBF66D /* TPKeyboardAvoidingScrollView.m */,
 				ADBEC6541640CAD100FC34F1 /* MainViewController */,
 				ADBEC65F1640CBCB00FC34F1 /* RootViewController */,
 				ADBEC69F1640DB5D00FC34F1 /* FeedViewController */,
@@ -515,6 +520,7 @@
 				AD36212716436ECB00013E40 /* RSSXMLParsingManager.m in Sources */,
 				AD36212A164381DC00013E40 /* RSSRootViewCell.m in Sources */,
 				AD36212D164381F800013E40 /* RSSFeedViewCell.m in Sources */,
+				ADCB00351647608E00BBF66D /* TPKeyboardAvoidingScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

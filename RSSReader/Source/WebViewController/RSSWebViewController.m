@@ -7,6 +7,7 @@
 //
 
 #import "RSSWebViewController.h"
+#import "RSSSocialNetworkShareControllerFactory.h"
 
 @interface RSSWebViewController ()
 
@@ -31,8 +32,32 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)dealloc {
+- (void)dealloc
+{
     [_webView release];
     [super dealloc];
 }
+
+- (IBAction)shareArticle:(id)sender
+{
+    UIActionSheet *shareActionSheet = [[UIActionSheet alloc] initWithTitle:@"Share Article"
+                                                                  delegate:self
+                                                         cancelButtonTitle:@"Cancel"
+                                                    destructiveButtonTitle:nil
+                                                         otherButtonTitles:@"Facebook",@"Twitter",@"Mail", nil];
+    
+    [shareActionSheet showInView:self.view];
+}
+
+#pragma mark - UIActionSheetDelegate Methods
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    UIViewController *shareViewController = [RSSSocialNetworkShareControllerFactory createSocialNetworkShareControllerOfType:buttonIndex
+                                                                            withText:self.articleToDisplay.name
+                                                                              andURL:self.articleToDisplay.article_url];
+    
+    [self presentViewController:shareViewController animated:YES completion:nil];
+}
+
 @end

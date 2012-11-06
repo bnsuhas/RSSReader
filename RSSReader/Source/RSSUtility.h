@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+    eShareOnFaceBook = 0,
+    eShareOnTwitter,
+    eShareUsingMail
+}ERSSShareType;
+
 @interface RSSUtility : NSObject
 
 +(NSManagedObjectContext *)managedObjectContext;

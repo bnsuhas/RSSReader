@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--Web View Controller-->
+        <!--Web View Controller - Article-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="RSSWebViewController" sceneMemberID="viewController">
@@ -20,7 +20,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VrA-oU-aRP"/>
+                    <navigationItem key="navigationItem" title="Article" id="VrA-oU-aRP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="KyM-at-4t2">
+                            <connections>
+                                <action selector="shareArticle:" destination="2" id="7C3-SS-YUk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="bbu-B5-B2A" id="uFf-XL-eeb"/>
                     </connections>
@@ -40,6 +46,7 @@
                             <navigationBar contentMode="scaleToFill" id="8NH-ad-Ubt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem title="Add RSS" id="GJM-52-akc">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Arx-8t-CHE">
@@ -202,6 +209,7 @@
                 <navigationController definesPresentationContext="YES" id="8ri-ms-QNS" customClass="RSSMainViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pvf-UG-3Fi">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Ktc-OH-ztr" kind="relationship" relationship="rootViewController" id="dWP-hw-6Zi"/>
@@ -260,9 +268,7 @@
                             <outlet property="delegate" destination="5ZR-yh-djL" id="ROb-B5-4Jx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Feeds" id="Wlk-xj-bAZ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="2F5-OK-tXq"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Feeds" id="Wlk-xj-bAZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AHa-Tm-bB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -318,6 +324,7 @@
         <class className="RSSWebViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSWebViewController.h"/>
             <relationships>
+                <relationship kind="action" name="shareArticle:"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>

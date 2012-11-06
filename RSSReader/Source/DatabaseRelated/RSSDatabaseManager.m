@@ -119,9 +119,18 @@ static RSSDatabaseManager *sharedDatabaseManager = nil;
     
     article.date = inDate;
     
-    article.isRead = [NSNumber numberWithBool:NO];
-    
     article.feed = [self feedObjectForURL:inSourceURL];
+    
+    //Dont mark any articles as unread if feed is added newly as this might result in overwhelming numbers.
+    if(article.feed.isNew)
+    {
+        article.isRead = [NSNumber numberWithBool:YES];
+    }
+    
+    else
+    {
+        article.isRead = [NSNumber numberWithBool:NO];
+    }
     
     [context save:nil];
     

@@ -21,6 +21,8 @@
 {
     [super viewDidLoad];
     
+    self.webView.scalesPageToFit = YES;
+    
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.articleToDisplay.article_url]]];
     
 	// Do any additional setup after loading the view, typically from a nib.
@@ -57,7 +59,19 @@
                                                                             withText:self.articleToDisplay.name
                                                                               andURL:self.articleToDisplay.article_url];
     
+    if([shareViewController isKindOfClass:[MFMailComposeViewController class]])
+    {
+        [(MFMailComposeViewController *)shareViewController setMailComposeDelegate:self];
+    }
+    
     [self presentViewController:shareViewController animated:YES completion:nil];
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate Methods
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

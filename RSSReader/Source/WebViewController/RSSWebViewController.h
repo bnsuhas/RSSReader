@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "RSS_Article.h"
+#import <MessageUI/MessageUI.h>
 
-@interface RSSWebViewController : UIViewController<UIActionSheetDelegate>
+@interface RSSWebViewController : UIViewController<UIActionSheetDelegate,MFMailComposeViewControllerDelegate>
 {
     RSS_Article *articleToDisplay_;
 }

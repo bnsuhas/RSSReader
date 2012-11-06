@@ -12,7 +12,7 @@
 
 +(UIViewController *)createSocialNetworkShareControllerOfType:(ERSSShareType)inRSSShareType withText:(NSString *)inText andURL:(NSString *)inURL
 {
-    UIViewController *socialNetworkShareController;
+    UIViewController *socialNetworkShareController = nil;
     
     switch (inRSSShareType)
     {
@@ -50,11 +50,6 @@
                 
             }
             
-            else
-            {
-                NSLog(@"UnAvailable");
-            }
-            
             break;
             
         case eShareOnTwitter:
@@ -90,19 +85,36 @@
                 
             }
             
-            else
-            {
-                NSLog(@"UnAvailable");
-            }
-            
             break;
             
         case eShareUsingMail:
+            
+            if ([MFMailComposeViewController canSendMail])
+            {
+                MFMailComposeViewController *mailer = [[[MFMailComposeViewController alloc] init] autorelease];
+                
+                [mailer setSubject:inText];
+                
+                [mailer setMessageBody:inURL isHTML:NO];
+                
+                socialNetworkShareController = mailer;
+            }
             
             break;
             
         default:
             break;
+    }
+    
+    if(nil == socialNetworkShareController)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                        message:@"Your device doesn't support the composer sheet"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+        [alert release];
     }
     
     return socialNetworkShareController;

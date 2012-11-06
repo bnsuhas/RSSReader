@@ -15,6 +15,8 @@
     RSS_Article *articleToDisplay_;
 }
 
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *progressIndicator;
+
 @property (retain, nonatomic) IBOutlet UIWebView *webView;
 
 @property(nonatomic, retain) RSS_Article *articleToDisplay;

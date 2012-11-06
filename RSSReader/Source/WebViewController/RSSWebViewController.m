@@ -8,6 +8,7 @@
 
 #import "RSSWebViewController.h"
 #import "RSSSocialNetworkShareControllerFactory.h"
+#import "RSS_Feed.h"
 
 @interface RSSWebViewController ()
 
@@ -37,6 +38,7 @@
 - (void)dealloc
 {
     [_webView release];
+    [_progressIndicator release];
     [super dealloc];
 }
 
@@ -49,6 +51,34 @@
                                                          otherButtonTitles:@"Facebook",@"Twitter",@"Mail", nil];
     
     [shareActionSheet showInView:self.view];
+}
+
+#pragma mark - UIWebViewDelegate Methods
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    self.progressIndicator.hidden = NO;
+    
+    [self.progressIndicator startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [self.progressIndicator stopAnimating];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    BOOL shouldStartLoadRequest = YES;
+    
+//    NSLog(@"%@ and %@",self.articleToDisplay.article_url,request.URL.absoluteString);
+//    
+//    if([self.articleToDisplay.article_url isEqualToString:request.URL.absoluteString])
+//    {
+//        shouldStartLoadRequest = YES;
+//    }
+    
+    return shouldStartLoadRequest;
 }
 
 #pragma mark - UIActionSheetDelegate Methods

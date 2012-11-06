@@ -16,7 +16,15 @@
                                 <rect key="frame" x="0.0" y="-1" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="8Nc-1v-c2h"/>
+                                </connections>
                             </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="5AU-qk-7I0">
+                                <rect key="frame" x="142" y="232" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -28,6 +36,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="progressIndicator" destination="5AU-qk-7I0" id="udc-qp-VuB"/>
                         <outlet property="webView" destination="bbu-B5-B2A" id="uFf-XL-eeb"/>
                     </connections>
                 </viewController>
@@ -325,6 +334,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSWebViewController.h"/>
             <relationships>
                 <relationship kind="action" name="shareArticle:"/>
+                <relationship kind="outlet" name="progressIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>

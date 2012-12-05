@@ -17,7 +17,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="delegate" destination="2" id="8Nc-1v-c2h"/>
+                                    <outlet property="delegate" destination="2" id="I6R-VT-g4l"/>
                                 </connections>
                             </webView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="5AU-qk-7I0">
@@ -36,7 +36,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="progressIndicator" destination="5AU-qk-7I0" id="udc-qp-VuB"/>
+                        <outlet property="progressIndicator" destination="5AU-qk-7I0" id="A5z-o6-0ZF"/>
                         <outlet property="webView" destination="bbu-B5-B2A" id="uFf-XL-eeb"/>
                     </connections>
                 </viewController>
